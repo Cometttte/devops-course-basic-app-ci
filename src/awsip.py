@@ -25,3 +25,13 @@ def find_ip(ip_range_data, ip_to_find):
 
 def find_aws_ip(ip_to_find):
   return find_ip(download_aws_ip_set(), ip_to_find)
+
+def trouver_premier_ip():
+  """Finds the first IP address in the AWS IP range JSON file."""
+  ip_range_data = download_aws_ip_set()
+  return ip_range_data[0]['ip_prefix'] if ip_range_data else None
+
+def trouver_dernier_ip():
+  """Finds the first IP address in the AWS IP range JSON file."""
+  ip_range_data = download_aws_ip_set()
+  return ip_range_data[-1]['ip_prefix'] if ip_range_data else None
