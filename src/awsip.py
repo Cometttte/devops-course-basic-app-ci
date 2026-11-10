@@ -25,3 +25,8 @@ def find_ip(ip_range_data, ip_to_find):
 
 def find_aws_ip(ip_to_find):
   return find_ip(download_aws_ip_set(), ip_to_find)
+
+def count_ip_range():
+  ip_range_data = download_aws_ip_set();
+  return len(ip_range_data) - 1 
+  
