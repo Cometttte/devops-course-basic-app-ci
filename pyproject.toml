@@ -5,4 +5,5 @@ requires-python = ">=3.14"
 dependencies = [
     "mock>=5.2.0",
     "nose>=1.3.7",
+    "pytest>=9.2.0",
 ]
