@@ -1,7 +1,8 @@
-import urllib.request
-import json
 import ipaddress
+import json
 import ssl
+import urllib.request
+
 
 def download_aws_ip_set():
   """Downloads the AWS IP range JSON file and returns it as a dictionary."""
@@ -35,6 +36,7 @@ def trouver_dernier_ip():
   """Finds the first IP address in the AWS IP range JSON file."""
   ip_range_data = download_aws_ip_set()
   return ip_range_data[-1]['ip_prefix'] if ip_range_data else None
+
 def count_ip_range():
   ip_range_data = download_aws_ip_set();
   return len(ip_range_data) - 1 
